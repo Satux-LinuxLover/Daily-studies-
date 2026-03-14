@@ -46,7 +46,29 @@ int main(void){
 		else 
 			printf("This isnt a real time\n");
 
+			//Project number 3 : date detector
+
+
+		int Fdd ,Fmm ,Fyy; // F stands for first
+		int Sdd ,Smm ,Syy;
+		int first_date ,second_date;
+		
+			printf("Enter the first date day/month/year ");
+			scanf("%2d/%2d/%4d",&Fdd,&Fmm,&Fyy);
+			printf("Enter the second date day/month/year ");
+			scanf("%2d/%2d/%4d",&Sdd,&Smm,&Syy);
 			
+					first_date = (Fyy * 10000) + (Fmm * 100) + Fdd;
+					second_date = (Syy * 10000) + (Smm * 100) + Sdd;
+					
+		if (first_date < second_date){
+			printf("The year %d/%d/%d is before the second year\n",Fdd,Fmm,Fyy);}
+		else if (second_date < first_date){
+			printf("The year %d/%d/%d is before the first year\n",Sdd,Smm,Syy);}
+		else if (first_date == second_date){
+			printf("Both years are equall \n");}
+		else
+			printf("this isnt a real year \n");
 
 
 
